@@ -13,6 +13,9 @@
 		12B7FCA21F22FB7E0094D464 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 12B7FCA01F22FB7E0094D464 /* Main.storyboard */; };
 		12B7FCA41F22FB7E0094D464 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 12B7FCA31F22FB7E0094D464 /* Assets.xcassets */; };
 		12B7FCA71F22FB7E0094D464 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 12B7FCA51F22FB7E0094D464 /* LaunchScreen.storyboard */; };
+		12B7FCB01F22FBF20094D464 /* LoadingEffect.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 12B7FCAF1F22FBF20094D464 /* LoadingEffect.xcassets */; };
+		12B7FCBA1F2301220094D464 /* LoadingEffectView.m in Sources */ = {isa = PBXBuildFile; fileRef = 12B7FCB91F2301220094D464 /* LoadingEffectView.m */; };
+		BA65D2F828063D355901FB39 /* libPods-UIViewLoadingEffect.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 790FCE868759A27C6A970CBC /* libPods-UIViewLoadingEffect.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +29,13 @@
 		12B7FCA31F22FB7E0094D464 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		12B7FCA61F22FB7E0094D464 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		12B7FCA81F22FB7E0094D464 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		12B7FCAF1F22FBF20094D464 /* LoadingEffect.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = LoadingEffect.xcassets; sourceTree = "<group>"; };
+		12B7FCB81F2301220094D464 /* LoadingEffectView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoadingEffectView.h; sourceTree = "<group>"; };
+		12B7FCB91F2301220094D464 /* LoadingEffectView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoadingEffectView.m; sourceTree = "<group>"; };
+		12B7FCBC1F2346B80094D464 /* dimensions.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = dimensions.h; sourceTree = "<group>"; };
+		790FCE868759A27C6A970CBC /* libPods-UIViewLoadingEffect.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-UIViewLoadingEffect.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		7FE13ADFFB0959122FA7DD75 /* Pods-UIViewLoadingEffect.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UIViewLoadingEffect.release.xcconfig"; path = "Pods/Target Support Files/Pods-UIViewLoadingEffect/Pods-UIViewLoadingEffect.release.xcconfig"; sourceTree = "<group>"; };
+		CDF3F6A1A9605C3F118FB03C /* Pods-UIViewLoadingEffect.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UIViewLoadingEffect.debug.xcconfig"; path = "Pods/Target Support Files/Pods-UIViewLoadingEffect/Pods-UIViewLoadingEffect.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,17 +43,29 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BA65D2F828063D355901FB39 /* libPods-UIViewLoadingEffect.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0582B4FB45A23AF730E4A206 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				CDF3F6A1A9605C3F118FB03C /* Pods-UIViewLoadingEffect.debug.xcconfig */,
+				7FE13ADFFB0959122FA7DD75 /* Pods-UIViewLoadingEffect.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		12B7FC8B1F22FB7E0094D464 = {
 			isa = PBXGroup;
 			children = (
 				12B7FC961F22FB7E0094D464 /* UIViewLoadingEffect */,
 				12B7FC951F22FB7E0094D464 /* Products */,
+				0582B4FB45A23AF730E4A206 /* Pods */,
+				59D116F512818CCB41A2D36D /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -58,9 +80,11 @@
 		12B7FC961F22FB7E0094D464 /* UIViewLoadingEffect */ = {
 			isa = PBXGroup;
 			children = (
+				12B7FCAE1F22FBAE0094D464 /* UIView+LoadingEffect */,
 				12B7FC9A1F22FB7E0094D464 /* AppDelegate.h */,
 				12B7FC9B1F22FB7E0094D464 /* AppDelegate.m */,
 				12B7FC9D1F22FB7E0094D464 /* ViewController.h */,
+				12B7FCBC1F2346B80094D464 /* dimensions.h */,
 				12B7FC9E1F22FB7E0094D464 /* ViewController.m */,
 				12B7FCA01F22FB7E0094D464 /* Main.storyboard */,
 				12B7FCA31F22FB7E0094D464 /* Assets.xcassets */,
@@ -79,6 +103,24 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		12B7FCAE1F22FBAE0094D464 /* UIView+LoadingEffect */ = {
+			isa = PBXGroup;
+			children = (
+				12B7FCAF1F22FBF20094D464 /* LoadingEffect.xcassets */,
+				12B7FCB81F2301220094D464 /* LoadingEffectView.h */,
+				12B7FCB91F2301220094D464 /* LoadingEffectView.m */,
+			);
+			name = "UIView+LoadingEffect";
+			sourceTree = "<group>";
+		};
+		59D116F512818CCB41A2D36D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				790FCE868759A27C6A970CBC /* libPods-UIViewLoadingEffect.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -86,9 +128,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 12B7FCAB1F22FB7E0094D464 /* Build configuration list for PBXNativeTarget "UIViewLoadingEffect" */;
 			buildPhases = (
+				12CB73E243A7A7C5A868AFEF /* [CP] Check Pods Manifest.lock */,
 				12B7FC901F22FB7E0094D464 /* Sources */,
 				12B7FC911F22FB7E0094D464 /* Frameworks */,
 				12B7FC921F22FB7E0094D464 /* Resources */,
+				4C551F40BAC6C37EAF98C336 /* [CP] Embed Pods Frameworks */,
+				42E6F579050740ADC4521D6C /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -138,6 +183,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				12B7FCB01F22FBF20094D464 /* LoadingEffect.xcassets in Resources */,
 				12B7FCA71F22FB7E0094D464 /* LaunchScreen.storyboard in Resources */,
 				12B7FCA41F22FB7E0094D464 /* Assets.xcassets in Resources */,
 				12B7FCA21F22FB7E0094D464 /* Main.storyboard in Resources */,
@@ -146,11 +192,60 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		12CB73E243A7A7C5A868AFEF /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		42E6F579050740ADC4521D6C /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-UIViewLoadingEffect/Pods-UIViewLoadingEffect-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4C551F40BAC6C37EAF98C336 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-UIViewLoadingEffect/Pods-UIViewLoadingEffect-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		12B7FC901F22FB7E0094D464 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				12B7FCBA1F2301220094D464 /* LoadingEffectView.m in Sources */,
 				12B7FC9F1F22FB7E0094D464 /* ViewController.m in Sources */,
 				12B7FC9C1F22FB7E0094D464 /* AppDelegate.m in Sources */,
 				12B7FC991F22FB7E0094D464 /* main.m in Sources */,
@@ -271,6 +366,7 @@
 		};
 		12B7FCAC1F22FB7E0094D464 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CDF3F6A1A9605C3F118FB03C /* Pods-UIViewLoadingEffect.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 5SU5K229BA;
@@ -283,6 +379,7 @@
 		};
 		12B7FCAD1F22FB7E0094D464 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7FE13ADFFB0959122FA7DD75 /* Pods-UIViewLoadingEffect.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 5SU5K229BA;
@@ -312,6 +409,7 @@
 				12B7FCAD1F22FB7E0094D464 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
