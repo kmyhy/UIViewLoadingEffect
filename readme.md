@@ -1,5 +1,7 @@
 # 自定义加载动效视图
 
+自定义加载动效视图，提供四种不同的效果：加载中、加载失败、无网络、加载成功。
+
 ## 用法：
 
 将 LoadingEffect.xcassets、LoadingEffectView.h/.m 添加到你的项目。
@@ -37,7 +39,7 @@ loadingView.actionHandler = ^(LoadingEffectView* _loadingView){
 
 	loadingView.effect = LoadingEffectLoading;
 	
-effect 属性是一个 LoadingEffect 枚举：
+effect 属性是一个 LoadingEffect 枚举，提供四种不同的效果：加载中、加载失败、无网络、加载成功：
 
 ```swift
 typedef NS_ENUM(NSUInteger,LoadingEffect){
@@ -47,6 +49,8 @@ typedef NS_ENUM(NSUInteger,LoadingEffect){
     LoadingEffectFailed     // 加载失败
 };
 ```
+
+> 注意，无网络是自动设置的，每次修改 effect 属性时，都会判断网络状况，如果发现断网，自动设置为“无网络”效果
 
 具体每种动效效果，请运行 demo 项目。
 
